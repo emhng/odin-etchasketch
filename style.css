@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap');
+
+body{
+    font-family: 'Fuzzy Bubbles', cursive;
+    box-sizing: border-box;
+}
+
+.hflex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.vflex{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 4rem;
+    margin: 0;
+    text-align: center;
+    opacity: 50%;
+    margin-bottom: 2rem;
+}
+
+#page{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#frame{
+    background-color: #c9171e;
+    border-radius: 2rem;
+    padding: 2rem 4rem 4rem 4rem;
+    margin-bottom: 2rem;
+}
+
+#main{
+    width: 70%;
+}
+
+#inner-frame{
+    background-color: yellow;
+    border-radius: 1rem;
+    height: 60vh;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+button{
+    background-color: yellow;
+    padding: 2rem 0.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Fuzzy Bubbles';
+    font-size: 1.2rem;
+}
+
+#sketchpad{
+    background-color: lightgray;
+    border-radius: 1rem;
+}
+
+.cell{
+    background-color: white;
+    width: 32px;
+    height: 32px;
+}
+
+#erase{
+    width:100%;
+}
+
+footer{
+    text-align: center;
+    margin-bottom: 2rem;;
+}
