@@ -7,7 +7,6 @@ body{
 
 .hflex{
     display: flex;
-    justify-content: space-between;
 }
 
 .vflex{
@@ -36,16 +35,22 @@ h1{
     margin-bottom: 2rem;
 }
 
-#main{
+#main-cont{
+    justify-content: space-between;
+}
+
+#vert-cont{
     width: 70%;
 }
 
 #inner-frame{
     background-color: yellow;
     border-radius: 1rem;
+    border: 30px solid yellow;
     height: 60vh;
-    padding: 2rem;
     margin-bottom: 2rem;
+    overflow: hidden;
+    position: relative;
 }
 
 button{
@@ -58,14 +63,21 @@ button{
 }
 
 #sketchpad{
+    flex-wrap: wrap;
+    gap: 1px;
     background-color: lightgray;
-    border-radius: 1rem;
+    position: absolute;
+    right: -8vw;
 }
 
 .cell{
     background-color: white;
     width: 32px;
     height: 32px;
+}
+
+.cell:hover{
+    background-color: black;
 }
 
 #erase{
