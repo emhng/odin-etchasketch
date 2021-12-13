@@ -50,7 +50,6 @@ h1{
     height: 60vh;
     margin-bottom: 2rem;
     overflow: hidden;
-    position: relative;
 }
 
 button{
@@ -64,7 +63,22 @@ button{
 
 .grid{
     display: grid;
+}
+
+.sixteen-dpi{
     grid-template-columns: repeat(16, 1fr);
+}
+
+.thirtytwo-dpi{
+    grid-template-columns: repeat(32, 1fr);
+}
+
+.sixtyfour-dpi{
+    grid-template-columns: repeat(64, 1fr);
+}
+
+.hundred-dpi{
+    grid-template-columns: repeat(100, 1fr);
 }
 
 #sketchpad{
@@ -74,12 +88,30 @@ button{
 
 .cell{
     background-color: white;
-    width: 1fr;
+}
+
+.sixteen-dpi-cell{
+    min-width: 40px;
     height: 40px;
 }
 
+.thirtytwo-dpi-cell{
+    min-width: 20px;
+    height: 20px;
+}
+
+.sixtyfour-dpi-cell{
+    min-width: 10px;
+    height: 10px;
+}
+
+.hundred-dpi-cell{
+    min-width: 6px;
+    height: 6px;
+}
+
 .cell:hover{
-    background-color: black;
+    background-color: magenta;
 }
 
 #erase{
@@ -88,5 +120,5 @@ button{
 
 footer{
     text-align: center;
-    margin-bottom: 2rem;;
+    margin-bottom: 2rem;
 }
