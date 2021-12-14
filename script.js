@@ -1,5 +1,9 @@
 const sketchpadCont = document.getElementById("sketchpad");
 
+const gridClassNames = ["sixteen-dpi","thirtytwo-dpi","sixtyfour-dpi","hundred-dpi"]
+
+const cellClassNames = ["sixteen-dpi-cell","thirtytwo-dpi-cell","sixtyfour-dpi-cell","hundred-dpi-cell"]
+
 const gridSize = {
     16: "sixteen-dpi",
     32: "thirtytwo-dpi",
@@ -50,15 +54,20 @@ const buttons = document.querySelectorAll("button.grid-select");
 buttons.forEach(function(button){
     button.addEventListener("click",function(){
         let gridChoice = button.id;
-        console.log(gridChoice);
-        addGrid(gridChoice);
+        changeGrid(gridChoice);
     });
 });
 
-function addGrid(gridChoice){
+function changeGrid(gridChoice){
+    const currentGridClass = gridClassNames;
+    const currentCellClass = cellClassNames;
     const cell = document.querySelectorAll(".cell");
+
+    sketchpadCont.classList.remove(...currentGridClass);
     sketchpadCont.classList.add(gridSize[gridChoice]);
+
     cell.forEach(function(cell){
+        cell.classList.remove(...currentCellClass);
         cell.classList.add(cellSize[gridChoice]);
     })
 }
