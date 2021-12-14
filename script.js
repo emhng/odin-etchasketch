@@ -30,6 +30,7 @@ document.body.onload = generateSketchpad(16, 200);
 //Performance note: Removing all cells and then adding the necessary amount of cells causes a bit of delay
 //Perhaps creating all necessary cells in one go and then just changing CSS classes was the best way to go for performance?
 //Alternatively consider just having to remove or add the necessary remaining amount of cells?
+//12/14/2021 - tested in Safari and delay is not very noticeable at all compared to firefox
 
 function addCell(gridChoice){
     const newCell = document.createElement("div");
@@ -81,6 +82,8 @@ function changeGrid(gridChoice){
 //Bug note: if mouseup happens outside of the sketch pad container, it doesn't trigger mouseup event
 //Bug note: Even though cells are set to draggable false, it is still dragging on occasion 
 // - look in to see if browser has some default drag that needs to be overridden
+//12/14/2021 - tested in Safari and noticed that cursour turns to text selection 
+//- when drawing the browser thinks it's trying to select text and if cursour moves outside of skethpad container, it just text selects stuff
 
 let isDrawing = false
 
