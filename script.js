@@ -77,9 +77,8 @@ function changeGrid(gridChoice){
 
 }
 
-//Bug note: if somehow clicks on 1px gap in grid, the grid lines change to black also
+
 //Bug note: if mouse movement is too fast, it skips pixels
-//Bug note: if mouseup happens outside of the sketch pad container, it doesn't trigger mouseup event
 //Bug note: Even though cells are set to draggable false, it is still dragging on occasion 
 // - look in to see if browser has some default drag that needs to be overridden
 //12/14/2021 - tested in Safari and noticed that cursour turns to text selection 
