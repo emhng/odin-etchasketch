@@ -107,6 +107,8 @@ sketchpadCont.addEventListener("mousedown", function(event){
     const gridLine = sketchpadCont
     const cell = event.target;
 
+    isDrawing = true;
+
     if(event.target !== gridLine){
 
         //NTS: change to ternary operator later
@@ -116,8 +118,6 @@ sketchpadCont.addEventListener("mousedown", function(event){
         else{
             cell.style.backgroundColor = inkColor;
         }
-
-        isDrawing = true;
     }
 
 })
