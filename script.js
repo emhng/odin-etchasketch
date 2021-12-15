@@ -59,9 +59,9 @@ function generateSketchpad(gridChoice, NUMBER_OF_CELLS){
 }
 
 //Clicking on button will change the DPI of grid
-const buttons = document.querySelectorAll("button.grid-select");
+const gridButtons = document.querySelectorAll("button.grid-select");
 
-buttons.forEach(function(button){
+gridButtons.forEach(function(button){
     button.addEventListener("click",function(){
         let gridChoice = button.id;
         generateSketchpad(gridChoice, NUMBER_OF_CELLS[gridChoice]);
@@ -116,3 +116,12 @@ mainCont.addEventListener("mouseup", function(event){
 
 })
 
+const eraseButton = document.getElementById("erase");
+
+eraseButton.addEventListener("click",function(event){
+    const cell = document.querySelectorAll(".cell");
+
+    cell.forEach(function(cell){
+        cell.style.backgroundColor = null;
+    })
+})
