@@ -35,9 +35,6 @@ document.body.onload = generateSketchpad(16, 200);
 function addCell(gridChoice){
     const newCell = document.createElement("div");
 
-    //Prevent user from dragging cell when drawing
-    newCell.setAttribute("draggable", false);
-
     newCell.classList.add("cell", cellSize[gridChoice])
 
     sketchpadCont.appendChild(newCell)
@@ -79,10 +76,8 @@ function changeGrid(gridChoice){
 
 
 //Bug note: if mouse movement is too fast, it skips pixels
-//Bug note: Even though cells are set to draggable false, it is still dragging on occasion 
-// - look in to see if browser has some default drag that needs to be overridden
-//12/14/2021 - tested in Safari and noticed that cursour turns to text selection 
-//- when drawing the browser thinks it's trying to select text and if cursour moves outside of skethpad container, it just text selects stuff
+//Bug note: Cells dragging while drawing currently resolved for the moment using CSS user-select: none
+     //Safari is still showing the cursour as text selection when drawing - make sure to fix later
 
 let isDrawing = false
 

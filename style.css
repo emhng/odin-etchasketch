@@ -84,6 +84,12 @@ button{
 #sketchpad{
     gap: 1px;
     background-color: lightgray;
+
+    /*Prevent user from dragging or selecting while drawing*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .cell{
