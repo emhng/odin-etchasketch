@@ -74,6 +74,28 @@ function changeGrid(gridChoice){
 
 }
 
+//Clicking on ink button will change the ink color
+const inkButtons = document.querySelectorAll("button.ink-select");
+let inkColor = "black";
+const rainbow = ["red","orange","yellow","green","blue","indigo","purple"]
+let rainbowIndex = 0
+
+function cycleRainbow(){
+    if(rainbowIndex < rainbow.length + 1){
+        return rainbowIndex++;
+    }
+    else{
+        rainbowIndex = 0;
+    }
+
+    }
+
+inkButtons.forEach(function(button){
+    button.addEventListener("click",function(){
+        let inkChoice = button.id;
+        inkColor = inkChoice;
+    });
+});
 
 //Bug note: if mouse movement is too fast, it skips pixels
 //Bug note: Cells dragging while drawing currently resolved for the moment using CSS user-select: none
@@ -86,7 +108,15 @@ sketchpadCont.addEventListener("mousedown", function(event){
     const cell = event.target;
 
     if(event.target !== gridLine){
-        cell.style.backgroundColor = "black";
+
+        //NTS: change to ternary operator later
+        if(inkColor === "rainbow"){
+            cell.style.backgroundColor = rainbow[cycleRainbow()];
+        }
+        else{
+            cell.style.backgroundColor = inkColor;
+        }
+
         isDrawing = true;
     }
 
@@ -97,7 +127,14 @@ sketchpadCont.addEventListener("mousemove", function(event){
     const cell = event.target;
 
     if(isDrawing === true && event.target !== gridLine){
-        cell.style.backgroundColor = "black";
+
+        //NTS: change to ternary operator later
+        if(inkColor === "rainbow"){
+            cell.style.backgroundColor = rainbow[cycleRainbow()];
+        }
+        else{
+            cell.style.backgroundColor = inkColor;
+        }
     }
 
 })
