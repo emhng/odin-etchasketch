@@ -108,11 +108,12 @@ sketchpadCont.addEventListener("mousemove", function(event){
 
 })
 
-sketchpadCont.addEventListener("mouseup", function(event){
-    const gridLine = sketchpadCont
-    const cell = event.target;
+const mainCont = document.getElementById("main-cont");
+
+mainCont.addEventListener("mouseup", function(event){
     if(isDrawing === true){
         isDrawing = false;
     }
 
 })
+
