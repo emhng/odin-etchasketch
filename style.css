@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 body{
-    font-family: 'Fuzzy Bubbles', cursive;
+    font-family: 'Fredoka One', cursive;
     box-sizing: border-box;
+    background-color: #fefefe;
 }
 
 .hflex{
@@ -18,21 +19,60 @@ h1{
     font-size: 4rem;
     margin: 0;
     text-align: center;
-    opacity: 50%;
-    margin-bottom: 2rem;
 }
 
 #page{
     max-width: 1200px;
+    min-width: 960px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#frame{
-    background-color: #c9171e;
-    border-radius: 2rem;
-    padding: 2rem 4rem 4rem 4rem;
+#frame-shadow{
+    background: linear-gradient(180deg, #FF5050 0%, #E91717 53.65%, #D90A0A 97.92%);
+    border-radius: 4rem;
+    padding: 0.3rem;
+    box-shadow: 0px 7px 15px 3px rgba(0, 0, 0, 0.15);
     margin-bottom: 2rem;
+}
+
+#frame{
+    background: linear-gradient(180deg, #FD3C3C 0%, #EC1717 42.19%);
+    border-radius: 3.7rem;
+    padding: 2rem 4rem 4rem 4rem;
+    margin-bottom: 0.3rem;
+}
+
+#logo{
+    position: relative;
+}
+
+#logo-main, #logo-highlight, #logo-shadow{
+    position: inherit;
+}
+
+/*Remove whitespace left from moving out of relative positions*/
+#logo-highlight, #logo-shadow{
+    margin-top: -4rem;
+}
+
+#logo-main{
+    z-index: 3;
+    color: #F02020;
+    margin-bottom: 2rem;
+}
+
+#logo-highlight{
+    z-index: 1;
+    color: #FF6060;
+    top: 5.6rem;
+    right: 0.1rem;
+}
+
+#logo-shadow{
+    z-index: 2;
+    color: #D90A0A;
+    top: 5.3rem;
 }
 
 #main-cont{
@@ -44,21 +84,22 @@ h1{
 }
 
 #inner-frame{
-    background-color: yellow;
+    background: #F0DA11;
     border-radius: 1rem;
-    border: 30px solid yellow;
+    border: 30px solid #F0DA11;
     height: 60vh;
     margin-bottom: 2rem;
     overflow: hidden;
 }
 
 button{
-    background-color: yellow;
+    background: #F0DA11;
     padding: 2rem 0.5rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    font-family: 'Fuzzy Bubbles';
+    font-family: 'Fredoka One', cursive;
     font-size: 1.2rem;
+    color: goldenrod;
 }
 
 .grid{
