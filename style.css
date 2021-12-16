@@ -63,7 +63,8 @@ h1{
 
 #logo-main{
     z-index: 3;
-    color: #F02020;
+    color: #EC1717;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
 }
 
@@ -71,7 +72,7 @@ h1{
     z-index: 1;
     color: #FF6060;
     top: 5.6rem;
-    right: 0.1rem;
+    right: 0.05rem;
 }
 
 #logo-shadow{
@@ -98,13 +99,18 @@ h1{
 }
 
 button{
-    background: #F0DA11;
+    background: linear-gradient(180deg, #FFED48 0%, #EAD413 100%);
     padding: 2rem 0.5rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
     font-family: 'Fredoka One', cursive;
-    font-size: 1.2rem;
-    color: goldenrod;
+    font-size: 1.5rem;
+    color: #F0DA11;
+    text-shadow: 0px -1px 3px rgba(229, 103, 71, 0.65), 
+                 0px 2px 15px rgba(229, 141, 9, 0.4), 
+                 0px 2px 0px #DA9A3B,
+                 -1px 2px 0px #DA9A3B,
+                 2px 2px 0px #DA9A3B;
 }
 
 .grid{
