@@ -6,7 +6,7 @@
 }
 
 body{
-    margin-top: 2rem;
+    margin: 2rem;
     font-family: 'Fredoka One', cursive;
     background-color: #fefefe;
 }
@@ -34,18 +34,17 @@ h1{
 }
 
 #frame-shadow{
-    background: linear-gradient(180deg, #FF5050 0%, #E91717 53.65%, #D90A0A 97.92%);
+    background: linear-gradient(180deg, #FF6060 0%, #E91717 10.54%, #D90A0A 97.92%);
     border-radius: 4rem;
-    padding: 0.3rem;
+    padding: 1rem;
     box-shadow: 0px 7px 15px 3px rgba(0, 0, 0, 0.15);
     margin-bottom: 2rem;
 }
 
 #frame{
-    background: linear-gradient(180deg, #FD3C3C 0%, #EC1717 42.19%);
-    border-radius: 3.7rem;
+    background: linear-gradient(180deg, #EC1717 -8.51%, #F52E2E 29.25%, #EC1717 85.27%);
+    border-radius: 3rem;
     padding: 2rem 4rem 4rem 4rem;
-    margin-bottom: 0.3rem;
 }
 
 #logo{
@@ -64,7 +63,7 @@ h1{
 #logo-main{
     z-index: 3;
     color: #EC1717;
-    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
 }
 
@@ -78,6 +77,7 @@ h1{
 #logo-shadow{
     z-index: 2;
     color: #D90A0A;
+    text-shadow: 0px 2px 15px rgba(180, 10, 10, 0.574);
     top: 5.3rem;
 }
 
@@ -177,6 +177,6 @@ button{
 }
 
 footer{
+    opacity: 0.8;
     text-align: center;
-    margin-bottom: 2rem;
 }
