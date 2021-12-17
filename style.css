@@ -21,7 +21,7 @@ body{
 }
 
 h1{
-    font-size: 4rem;
+    font-size: 5rem;
     margin: 0;
     text-align: center;
 }
@@ -57,7 +57,7 @@ h1{
 
 /*Remove whitespace left from moving out of relative positions*/
 #logo-highlight, #logo-shadow{
-    margin-top: -4rem;
+    margin-top: -5rem;
 }
 
 #logo-main{
@@ -70,7 +70,7 @@ h1{
 #logo-highlight{
     z-index: 1;
     color: #FF6060;
-    top: 5.6rem;
+    top: 7rem;
     right: 0.05rem;
 }
 
@@ -78,7 +78,7 @@ h1{
     z-index: 2;
     color: #D90A0A;
     text-shadow: 0px 2px 15px rgba(180, 10, 10, 0.574);
-    top: 5.3rem;
+    top: 6.5rem;
 }
 
 #main-cont{
