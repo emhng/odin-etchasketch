@@ -70,18 +70,6 @@ function changeGrid(gridChoice){
 //Clicking on ink button will change the ink color
 const inkButtons = document.querySelectorAll("button.ink-select");
 let inkColor = "black";
-const rainbow = ["red","orange","yellow","green","blue","indigo","purple"]
-let rainbowIndex = 0
-
-function cycleRainbow(){
-    if(rainbowIndex < rainbow.length + 1){
-        return rainbowIndex++;
-    }
-    else{
-        rainbowIndex = 0;
-    }
-
-    }
 
 inkButtons.forEach(function(button){
     button.addEventListener("click",function(){
@@ -90,10 +78,16 @@ inkButtons.forEach(function(button){
     });
 });
 
-//Bug note: if mouse movement is too fast, it skips pixels
-//Bug note: Cells dragging while drawing currently resolved for the moment using CSS user-select: none
-     //Safari is still showing the cursour as text selection when drawing - make sure to fix later
+const rainbow = ["red","darkorange","yellow","limegreen","blue","darkslateblue","mediumorchid"]
+let rainbowIndex = 0
 
+//Continuously cycle through the rainbow in order of ROYGBIV
+function cycleRainbow(){
+    return (rainbowIndex < rainbow.length + 1) ? rainbowIndex++ : rainbowIndex = 0;
+    }
+
+//Draw on sketchpad when mouse is pressed and held down
+//Bug note: if mouse movement is too fast, it skips pixels
 let isDrawing = false
 
 sketchpadCont.addEventListener("mousedown", function(event){
@@ -103,14 +97,7 @@ sketchpadCont.addEventListener("mousedown", function(event){
     isDrawing = true;
 
     if(event.target !== gridLine){
-
-        //NTS: change to ternary operator later
-        if(inkColor === "rainbow"){
-            cell.style.backgroundColor = rainbow[cycleRainbow()];
-        }
-        else{
-            cell.style.backgroundColor = inkColor;
-        }
+        return (inkColor === "rainbow") ? cell.style.backgroundColor = rainbow[cycleRainbow()] : cell.style.backgroundColor = inkColor;
     }
 
 })
@@ -120,14 +107,7 @@ sketchpadCont.addEventListener("mousemove", function(event){
     const cell = event.target;
 
     if(isDrawing === true && event.target !== gridLine){
-
-        //NTS: change to ternary operator later
-        if(inkColor === "rainbow"){
-            cell.style.backgroundColor = rainbow[cycleRainbow()];
-        }
-        else{
-            cell.style.backgroundColor = inkColor;
-        }
+        return (inkColor === "rainbow") ? cell.style.backgroundColor = rainbow[cycleRainbow()] : cell.style.backgroundColor = inkColor;
     }
 
 })
@@ -138,6 +118,7 @@ document.body.addEventListener("mouseup", function(event){
     }
 })
 
+//Clear sketchpad
 const eraseButton = document.getElementById("erase");
 
 eraseButton.addEventListener("click",function(event){
