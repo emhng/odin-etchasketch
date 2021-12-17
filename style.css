@@ -83,6 +83,7 @@ h1{
 
 #main-cont{
     justify-content: space-between;
+    gap: 1rem;
 }
 
 #vert-cont{
@@ -90,12 +91,18 @@ h1{
 }
 
 #inner-frame{
-    background: #F0DA11;
+    background: linear-gradient(180deg, #FFED48 0%, #EAD413 100%);
     border-radius: 1rem;
-    border: 30px solid #F0DA11;
-    height: 60vh;
     margin-bottom: 2rem;
+    padding: 1rem;
+    border: rgb(251, 158, 28) 3px solid;
+}
+
+#sketchpad-cont{
+    height: 55vh;
     overflow: hidden;
+    border: 2px solid rgba(251, 158, 28, 0.382);
+    border-radius: 0.4rem;
 }
 
 button{
