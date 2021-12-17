@@ -57,7 +57,7 @@ h1{
 
 /*Remove whitespace left from moving out of relative positions*/
 #logo-highlight, #logo-shadow{
-    margin-top: -5rem;
+    margin-top: -5.5rem;
 }
 
 #logo-main{
@@ -70,7 +70,7 @@ h1{
 #logo-highlight{
     z-index: 1;
     color: #FF6060;
-    top: 7rem;
+    top: 6.5rem;
     right: 0.05rem;
 }
 
