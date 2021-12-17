@@ -1,5 +1,5 @@
 # TOP JavaScript Basics Foundations Project - Etch-A-Sketch
-2021/12/10 ~
+2021/12/10 ~ 2021/12/16
 
 ## Objectives
 
@@ -18,3 +18,10 @@ Optional features:
 
 
 ## Learnings
+
+Used a lot of principles that I had used in the Rock Paper Scissors project.
+
+Spent a lot of time resolving bugs that involved the drawing function - 
+luckily a lot of the bugs were easily resolved by just changing what was being targeted or the order of the code
+
+Continuing to find that checking how the site looks and functions in different browsers and screen sizes is important.
