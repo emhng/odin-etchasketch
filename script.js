@@ -78,10 +78,10 @@ inkButtons.forEach(function(button){
     });
 });
 
+//Continuously cycle through the rainbow in order of ROYGBIV
 const rainbow = ["red","darkorange","yellow","limegreen","blue","darkslateblue","mediumorchid"]
 let rainbowIndex = 0
 
-//Continuously cycle through the rainbow in order of ROYGBIV
 function cycleRainbow(){
     return (rainbowIndex < rainbow.length + 1) ? rainbowIndex++ : rainbowIndex = 0;
     }
