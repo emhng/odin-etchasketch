@@ -1,7 +1,5 @@
 const gridClassNames = ["sixteen-dpi","thirtytwo-dpi","sixtyfour-dpi","hundred-dpi"]
 
-const cellClassNames = ["sixteen-dpi-cell","thirtytwo-dpi-cell","sixtyfour-dpi-cell","hundred-dpi-cell"]
-
 const gridSize = {
     16: "sixteen-dpi",
     32: "thirtytwo-dpi",
@@ -17,20 +15,15 @@ const cellSize = {
 };
 
 const NUMBER_OF_CELLS = {
-    16: 200,
-    32: 750,
-    64: 2900,
-    100: 8000
+    16: 230,
+    32: 880,
+    64: 3300,
+    100: 8100
 }
 
 const sketchpadCont = document.getElementById("sketchpad");
 
-document.body.onload = generateSketchpad(16, 200);
-
-//Performance note: Removing all cells and then adding the necessary amount of cells causes a bit of delay
-//Perhaps creating all necessary cells in one go and then just changing CSS classes was the best way to go for performance?
-//Alternatively consider just having to remove or add the necessary remaining amount of cells?
-//12/14/2021 - tested in Safari and delay is not very noticeable at all compared to firefox
+document.body.onload = generateSketchpad(16, 230);
 
 function addCell(gridChoice){
     const newCell = document.createElement("div");
@@ -55,7 +48,7 @@ function generateSketchpad(gridChoice, NUMBER_OF_CELLS){
     }
 }
 
-//Clicking on button will change the DPI of grid
+//Clicking on grid button will change the DPI of grid
 const gridButtons = document.querySelectorAll("button.grid-select");
 
 gridButtons.forEach(function(button){
@@ -144,7 +137,6 @@ document.body.addEventListener("mouseup", function(event){
         isDrawing = false;
     }
 })
-
 
 const eraseButton = document.getElementById("erase");
 
