@@ -42,7 +42,7 @@ h1{
 }
 
 #frame{
-    background: linear-gradient(180deg, #EC1717 -8.51%, #F52E2E 29.25%, #EC1717 85.27%);
+    background: linear-gradient(180deg, #EC1717 -8.51%, #F52E2E 8.11%, #EC1717 85.27%);
     border-radius: 3rem;
     padding: 2rem 4rem 4rem 4rem;
 }
