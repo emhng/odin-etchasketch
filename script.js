@@ -25,6 +25,13 @@ const sketchpadCont = document.getElementById("sketchpad");
 
 document.body.onload = generateSketchpad(16, 230);
 
+function generateSketchpad(gridChoice, NUMBER_OF_CELLS){
+    removePreviousCells();
+    for(i=0; i < NUMBER_OF_CELLS; i++){
+        addCell(gridChoice);
+    }
+}
+
 function addCell(gridChoice){
     const newCell = document.createElement("div");
 
@@ -39,13 +46,6 @@ function removePreviousCells(){
     cell.forEach(function(cell){
         cell.remove();
     })
-}
-
-function generateSketchpad(gridChoice, NUMBER_OF_CELLS){
-    removePreviousCells();
-    for(i=0; i < NUMBER_OF_CELLS; i++){
-        addCell(gridChoice);
-    }
 }
 
 //Clicking on grid button will change the DPI of grid
