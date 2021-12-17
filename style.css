@@ -70,6 +70,7 @@ h1{
 #logo-highlight{
     z-index: 1;
     color: #FF6060;
+    text-shadow: 0px 10px 30px rgba(180, 10, 10, 0.5);
     top: 6.5rem;
     right: 0.05rem;
 }
@@ -77,7 +78,6 @@ h1{
 #logo-shadow{
     z-index: 2;
     color: #D90A0A;
-    text-shadow: 0px 2px 15px rgba(180, 10, 10, 0.574);
     top: 6.5rem;
 }
 
