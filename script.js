@@ -139,14 +139,12 @@ sketchpadCont.addEventListener("mousemove", function(event){
 
 })
 
-const mainCont = document.getElementById("main-cont");
-
-mainCont.addEventListener("mouseup", function(event){
+document.body.addEventListener("mouseup", function(event){
     if(isDrawing === true){
         isDrawing = false;
     }
-
 })
+
 
 const eraseButton = document.getElementById("erase");
 
