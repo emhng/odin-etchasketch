@@ -1,193 +1,185 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-*{
-    box-sizing: border-box;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-body{
-    margin: 2rem;
-    font-family: 'Fredoka One', cursive;
-    background-color: #fefefe;
+body {
+  margin: 2rem;
+  font-family: 'Fredoka One', cursive;
+  background-color: #fefefe;
 }
 
-.hflex{
-    display: flex;
+.hflex {
+  display: flex;
 }
 
-.vflex{
-    display: flex;
-    flex-direction: column;
+.vflex {
+  display: flex;
+  flex-direction: column;
 }
 
-h1{
-    font-size: 5rem;
-    margin: 0;
-    text-align: center;
+h1 {
+  font-size: 5rem;
+  margin: 0;
+  text-align: center;
 }
 
-#page{
-    max-width: 70vw;
-    min-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
+#page {
+  max-width: 70vw;
+  min-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#frame-shadow{
-    background: linear-gradient(180deg, #FF6060 0%, #E91717 3.8%, #D90A0A 97.92%);
-    border-radius: 4rem;
-    padding: 1rem;
-    box-shadow: 0px 7px 15px 3px rgba(0, 0, 0, 0.15);
-    margin-bottom: 2rem;
+#frame-shadow {
+  background: linear-gradient(180deg, #ff6060 0%, #e91717 3.8%, #d90a0a 97.92%);
+  border-radius: 4rem;
+  padding: 1rem;
+  box-shadow: 0px 7px 15px 3px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
 }
 
-#frame{
-    background: linear-gradient(180deg, #EC1717 -8.51%, #F52E2E 8.11%, #EC1717 85.27%);
-    border-radius: 3rem;
-    padding: 2rem 4rem 4rem 4rem;
+#frame {
+  background: linear-gradient(
+    180deg,
+    #ec1717 -8.51%,
+    #f52e2e 8.11%,
+    #ec1717 85.27%
+  );
+  border-radius: 3rem;
+  padding: 2rem 4rem 4rem 4rem;
 }
 
-#logo{
-    position: relative;
+#logo {
+  position: relative;
 }
 
-#logo-main, #logo-highlight, #logo-shadow{
-    position: inherit;
+#logo-main,
+#logo-highlight,
+#logo-shadow {
+  position: inherit;
 }
 
 /*Remove whitespace left from moving out of relative positions*/
-#logo-highlight, #logo-shadow{
-    margin-top: -5.5rem;
+#logo-highlight,
+#logo-shadow {
+  margin-top: -5.5rem;
 }
 
-#logo-main{
-    z-index: 3;
-    color: #F52E2E;
-    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+#logo-main {
+  z-index: 3;
+  color: #f52e2e;
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
-#logo-highlight{
-    z-index: 1;
-    color: #FF6060;
-    text-shadow: 0px 10px 30px rgba(180, 10, 10, 0.5);
-    top: 6.5rem;
-    right: 0.05rem;
+#logo-highlight {
+  z-index: 1;
+  color: #ff6060;
+  text-shadow: 0px 10px 30px rgba(180, 10, 10, 0.5);
+  top: 6.5rem;
+  right: 0.05rem;
 }
 
-#logo-shadow{
-    z-index: 2;
-    color: #D90A0A;
-    top: 6.5rem;
+#logo-shadow {
+  z-index: 2;
+  color: #d90a0a;
+  top: 6.5rem;
 }
 
-#main-cont{
-    justify-content: space-between;
-    gap: 1rem;
+#main-cont {
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-#vert-cont{
-    width: 70%;
+#vert-cont {
+  width: 70%;
 }
 
-#inner-frame{
-    background: #F0DA11;
-    border-radius: 1rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border: rgb(251, 158, 28) 3px solid;
+#inner-frame {
+  background: #f0da11;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: rgb(251, 158, 28) 3px solid;
 }
 
-#sketchpad-cont{
-    height: 50vh;
-    overflow: hidden;
-    border: 2px solid rgba(251, 158, 28, 0.382);
-    border-radius: 0.4rem;
+#sketchpad-cont {
+  height: 50vh;
+  overflow: hidden;
+  border: 2px solid rgba(251, 158, 28, 0.382);
+  border-radius: 0.4rem;
 }
 
-button{
-    position: relative;
-    background: #F0DA11;
-    padding: 2rem 0.5rem;
-    border-radius: 1rem;
-    border: rgb(251, 158, 28) 3px solid;
-    margin-bottom: 1rem;
-    font-family: 'Fredoka One', cursive;
-    font-size: 1.5rem;
-    color: #ffed48ab;
-    text-shadow: 0px -1px 3px rgba(229, 103, 71, 0.65), 
-                 0px 2px 15px rgba(229, 141, 9, 0.4), 
-                 0px 2px 0px #DA9A3B,
-                 -1px 2px 0px #DA9A3B,
-                 2px 2px 0px #DA9A3B;
+button {
+  position: relative;
+  background: #f0da11;
+  padding: 2rem 0.5rem;
+  border-radius: 1rem;
+  border: rgb(251, 158, 28) 3px solid;
+  margin-bottom: 1rem;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.5rem;
+  color: #ffed48ab;
+  text-shadow: 0px -1px 3px rgba(229, 103, 71, 0.65),
+    0px 2px 15px rgba(229, 141, 9, 0.4), 0px 2px 0px #da9a3b,
+    -1px 2px 0px #da9a3b, 2px 2px 0px #da9a3b;
 }
 
-button:active{
-    border: rgba(203, 0, 0) 3px solid;
-    box-shadow: inset 0px 0px 2px 2px rgba(156, 5, 5, 0.3);
-    top: 0.1rem;
+button:active {
+  border: rgba(203, 0, 0) 3px solid;
+  box-shadow: inset 0px 0px 2px 2px rgba(156, 5, 5, 0.3);
+  top: 0.1rem;
 }
 
-.grid{
-    display: grid;
+.grid {
+  display: grid;
 }
 
-.sixteen-dpi{
-    grid-template-columns: repeat(16, 1fr);
+.sixteen-dpi {
+  grid-template-columns: repeat(16, 1fr);
 }
 
-.thirtytwo-dpi{
-    grid-template-columns: repeat(32, 1fr);
+.thirtytwo-dpi {
+  grid-template-columns: repeat(32, 1fr);
 }
 
-.sixtyfour-dpi{
-    grid-template-columns: repeat(64, 1fr);
+.sixtyfour-dpi {
+  grid-template-columns: repeat(64, 1fr);
 }
 
-.hundred-dpi{
-    grid-template-columns: repeat(100, 1fr);
+.hundred-dpi {
+  grid-template-columns: repeat(100, 1fr);
 }
 
-#sketchpad{
-    gap: 1px;
-    background-color: lightgray;
+#sketchpad {
+  gap: 1px;
+  background-color: lightgray;
 
-    /*Prevent user from dragging or selecting while drawing*/
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  /*Prevent user from dragging or selecting while drawing*/
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.cell{
-    background-color: white;
+.cell {
+  background-color: white;
+  width: 100%;
+  padding-bottom: 100%;
 }
 
-.sixteen-dpi-cell{
-    height: 5vh;
+.cell:hover {
+  background-color: magenta;
 }
 
-.thirtytwo-dpi-cell{
-    height: 2vh;
+#erase {
+  width: 100%;
 }
 
-.sixtyfour-dpi-cell{
-    height: 1vh;
-}
-
-.hundred-dpi-cell{
-    height: 1vh;
-}
-
-.cell:hover{
-    background-color: magenta;
-}
-
-#erase{
-    width:100%;
-}
-
-footer{
-    opacity: 0.8;
-    text-align: center;
+footer {
+  opacity: 0.8;
+  text-align: center;
 }
